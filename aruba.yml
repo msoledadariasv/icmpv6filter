@@ -1,0 +1,4 @@
+topology:
+  nodes:
+    node:
+      kind: vrnetlab/aruba_arubaos-cx:20230531220439
