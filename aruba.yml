@@ -1,4 +1,11 @@
 topology:
   nodes:
-    node:
-      kind: vrnetlab/aruba_arubaos-cx:20230531220439
+    arubasw:
+      kind: aruba_aoscx 
+      image: vrnetlab/aruba_arubaos-cx:20230531220439
+    PC1:
+      kind: linux
+      image: esanchezv/kaliipv6v2.2:latest  
+  links:
+    
+    - endpoints: ["aruba_aoscx:eth1","PC1:eth1"]
