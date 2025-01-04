@@ -8,4 +8,4 @@ topology:
       image: esanchezv/kaliipv6v2.2:latest  
   links:
     
-    - endpoints: ["aruba_aoscx:eth1","PC1:eth1"]
+    - endpoints: ["arubasw:eth1","PC1:eth1"]
