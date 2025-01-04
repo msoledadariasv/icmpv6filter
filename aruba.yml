@@ -1,3 +1,4 @@
+name: aruba
 topology:
   nodes:
     arubasw:
