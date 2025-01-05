@@ -3,8 +3,7 @@ topology:
   nodes:
     iol-1:
       kind: cisco_iol
-      image: vrnetlab/cisco_iol:l2-17.12.01
-      type: l2
+      image: vrnetlab/cisco_iol:17.12.01
     arubaaccess:
       kind: aruba_aoscx 
       image: vrnetlab/aruba_arubaos-cx:20230531220439  
