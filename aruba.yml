@@ -1,9 +1,9 @@
 name: aruba
 topology:
   nodes:
-    iol-1:
-      kind: cisco_iol
-      image: vrnetlab/cisco_iol:17.12.01
+    arubacore:
+      kind: aruba_aoscx 
+      image: vrnetlab/aruba_arubaos-cx:20230531220439  
     arubaaccess:
       kind: aruba_aoscx 
       image: vrnetlab/aruba_arubaos-cx:20230531220439  
@@ -21,7 +21,7 @@ topology:
       image: esanchezv/kaliipv6v2.2:latest  
   links:
     
-    - endpoints: ["iol-1:Ethernet0/1","arubaaccess:eth1"]
+    - endpoints: ["arubacore:eth1","arubaaccess:eth1"]
     - endpoints: ["arubaaccess:eth2","PC1:eth1"]
     - endpoints: ["arubaaccess:eth3","PC2:eth1"]
     - endpoints: ["arubaaccess:eth4","PC3:eth1"]
