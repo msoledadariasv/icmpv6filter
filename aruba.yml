@@ -1,12 +1,29 @@
 name: aruba
 topology:
   nodes:
-    arubasw:
+    arubacore:
       kind: aruba_aoscx 
       image: vrnetlab/aruba_arubaos-cx:20230531220439
+    arubaaccess:
+      kind: aruba_aoscx 
+      image: vrnetlab/aruba_arubaos-cx:20230531220439  
     PC1:
+      kind: linux
+      image: esanchezv/kaliipv6v2.2:latest
+    PC2:
+      kind: linux
+      image: esanchezv/kaliipv6v2.2:latest
+    PC3:
+      kind: linux
+      image: esanchezv/kaliipv6v2.2:latest
+    PC4:
       kind: linux
       image: esanchezv/kaliipv6v2.2:latest  
   links:
     
-    - endpoints: ["arubasw:eth1","PC1:eth1"]
+    - endpoints: ["arubacore:eth1","arubaaccess:eth1"]
+    - endpoints: ["arubaaccess:eth2","PC1:eth1"]
+    - endpoints: ["arubaaccess:eth3","PC2:eth1"]
+    - endpoints: ["arubaaccess:eth4","PC3:eth1"]
+    - endpoints: ["arubaaccess:eth5","PC4:eth1"]
+    
