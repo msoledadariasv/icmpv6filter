@@ -3,7 +3,10 @@ topology:
   nodes:
     arubacore:
       kind: aruba_aoscx 
-      image: vrnetlab/aruba_arubaos-cx:20230531220439  
+      image: vrnetlab/aruba_arubaos-cx:20230531220439
+      ports:
+        - 8080:80/tcp
+        - 443:443/tcp
     arubaaccess:
       kind: aruba_aoscx 
       image: vrnetlab/aruba_arubaos-cx:20230531220439  
