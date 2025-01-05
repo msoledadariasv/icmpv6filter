@@ -1,0 +1,6 @@
+conf t
+vlan 20,30
+exit
+interface vlan 20
+ipv6 address 2001:db8:20::2/64
+exit
