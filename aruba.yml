@@ -9,7 +9,9 @@ topology:
         - 443:443/tcp
     arubaaccess:
       kind: aruba_aoscx 
-      image: vrnetlab/aruba_arubaos-cx:20230531220439  
+      image: vrnetlab/aruba_arubaos-cx:20230531220439
+      ports:
+        - 8081:80/tcp
     PC1:
       kind: linux
       image: esanchezv/kaliipv6v2.2:latest
