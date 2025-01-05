@@ -10,8 +10,7 @@ topology:
     arubaaccess:
       kind: aruba_aoscx 
       image: vrnetlab/aruba_arubaos-cx:20230531220439
-      ports:
-        - 8081:80/tcp
+      startup-config: cfgaccess.txt
     PC1:
       kind: linux
       image: esanchezv/kaliipv6v2.2:latest
