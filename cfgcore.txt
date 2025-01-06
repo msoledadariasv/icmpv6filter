@@ -5,7 +5,7 @@ exit
 vlan 20
 exit
 interface vlan 20
-ipv6 address 2001:20::1/64
+ipv6 address 2001:db8:20::1/64
 exit
 interface 1/1/1
 no routing
