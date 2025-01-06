@@ -23,3 +23,8 @@ no routing
 vlan access 30
 no shutdown
 exit
+interface 1/1/3
+no routing
+vlan access 30
+no shutdown
+exit
