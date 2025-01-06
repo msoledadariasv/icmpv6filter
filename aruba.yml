@@ -7,6 +7,7 @@ topology:
       #startup-config: cfgcore.txt
       ports:
         - 8080:80/tcp
+        - 4443:443/tcp
         
     arubaaccess:
       kind: aruba_aoscx 
