@@ -12,7 +12,7 @@ topology:
     arubaaccess:
       kind: aruba_aoscx 
       image: vrnetlab/aruba_arubaos-cx:20230531220439
-      startup-config: cfgaccess.txt
+      #startup-config: cfgaccess.txt
     PC1:
       kind: linux
       image: esanchezv/kaliipv6v2.2:latest
