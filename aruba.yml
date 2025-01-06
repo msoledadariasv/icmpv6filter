@@ -4,6 +4,7 @@ topology:
     arubacore:
       kind: aruba_aoscx 
       image: vrnetlab/aruba_arubaos-cx:20230531220439
+      startup-config: cfgcore.txt
       ports:
         - 8080:80/tcp
         - 443:443/tcp
