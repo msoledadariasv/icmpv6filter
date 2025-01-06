@@ -19,3 +19,4 @@ range 2001:db8:30::31 2001:db8:30::3f prefix-len 64
 exit
 authoritative
 enable
+exit
