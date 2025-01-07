@@ -15,7 +15,7 @@ topology:
       kind: nokia_srlinux
       image: ghcr.io/nokia/srlinux:24.10.1
       #type: ixrd3
-      #startup-config: srlsw/config.json    
+      startup-config: srlsw/config.json    
         
     #arubaaccess:
       #kind: aruba_aoscx 
