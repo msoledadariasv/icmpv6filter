@@ -17,8 +17,7 @@ topology:
       #ports:
         #- 8080:80/tcp
         #- 4443:443/tcp
-      wait-for:
-        - arubacore  
+      
     PC1:
       kind: linux
       image: esanchezv/kaliipv6v2.2:latest
