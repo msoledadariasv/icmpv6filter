@@ -1,6 +1,7 @@
 conf t
-nd
+nd-snooping enable
 vlan 20,30
+nd-snooping
 exit
 interface vlan 20
 ipv6 address 2001:db8:20::2/64
@@ -20,6 +21,7 @@ dhcpv6-relay
 interface 1/1/1
 no routing
 vlan trunk allowed 20,30
+nd-snooping trust
 no shutdown
 exit
 interface 1/1/2
