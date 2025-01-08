@@ -6,17 +6,17 @@ topology:
       kind: aruba_aoscx 
       image: vrnetlab/aruba_arubaos-cx:20230531220439
       startup-config: cfgcore.txt
-      ports:
-        - 8080:80/tcp
-        - 4443:443/tcp
+      #ports:
+        #- 8080:80/tcp
+        #- 4443:443/tcp
             
     arubaaccess:
       kind: aruba_aoscx 
       image: vrnetlab/aruba_arubaos-cx:20230531220439
       startup-config: cfgaccess.txt
-      #ports:
-        #- 8080:80/tcp
-        #- 4443:443/tcp
+      ports:
+        - 8080:80/tcp
+        - 4443:443/tcp
       
     PC1:
       kind: linux
