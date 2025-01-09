@@ -14,9 +14,9 @@ topology:
       kind: aruba_aoscx 
       image: vrnetlab/aruba_arubaos-cx:20230531220439
       startup-config: cfgaccess.txt
-      ports:
-        - 8080:80/tcp
-        - 4443:443/tcp
+      #ports:
+        #- 8080:80/tcp
+        #- 4443:443/tcp
       
     PC1:
       kind: linux
@@ -36,14 +36,13 @@ topology:
       - ip -6 route del default dev eth0
     PC4:
       kind: linux
-      image: esanchezv/kaliipv6v2.2:latest
+      image: esanchezv/bettercapweb:latest 
       exec:
       - ip -6 route del default dev eth0
-    PC5:
-      kind: linux
-      image: bettercap/bettercap:latest 
-      exec:
-      - ip -6 route del default dev eth0
+      ports:
+        - 8080:80/tcp
+        - 8081:8081/tcp
+    
       
   links:
     
@@ -57,7 +56,5 @@ topology:
       mtu: 1500
     - endpoints: ["arubaaccess:eth5","PC4:eth1"]
       mtu: 1500
-    - endpoints: ["arubaaccess:eth6","PC5:eth1"]
-      mtu: 1500  
     
     
