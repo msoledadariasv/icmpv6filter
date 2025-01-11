@@ -37,8 +37,8 @@ topology:
     PC4:
       kind: linux
       image: esanchezv/ndpmon2.2:latest
-      binds:
-        - ./config/ndpmon.tgz:/var/www/html/ndpmon.tgz
+      ports:
+        - 8080:80/tcp
       exec:
       - ip -6 route del default dev eth0
      
