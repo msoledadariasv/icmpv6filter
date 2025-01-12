@@ -36,9 +36,7 @@ topology:
       - ip -6 route del default dev eth0
     PC4:
       kind: linux
-      image: esanchezv/ndpmon2.3:latest
-      ports:
-        - 8080:80/tcp
+      image: esanchezv/kaliipv6v2.2:latest
       exec:
       - ip -6 route del default dev eth0
      
