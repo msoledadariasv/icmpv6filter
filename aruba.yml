@@ -48,8 +48,7 @@ topology:
       - ip -6 route del default dev eth0
       ports: 
       - 3000:3000/tcp  
-     
-    
+        
       
   links:
     
@@ -63,5 +62,7 @@ topology:
       mtu: 1500
     - endpoints: ["arubaaccess:eth5","PC4:eth1"]
       mtu: 1500
+    - endpoints: ["arubaaccess:eth16","ntop:eth1"]
+      mtu: 1500  
     
     
