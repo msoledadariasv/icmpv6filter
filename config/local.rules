@@ -1,0 +1,11 @@
+#alert ipv6 !fe80::1:2 any -> any any (msg:"RA desde direccion link-local no autorizada"; ip_proto:58; itype:134; icode:0; classtype:policy-violation; sid:1000001; rev:1;)
+alert ipv6 any any -> any any (msg:"ICMPv6 Flood RA"; ip_proto:58; itype:134; icode:0; threshold: type both, track by_dst, count 100, seconds 5; classtype:policy-violation; sid:1000002; rev:1;)
+alert ipv6 any any -> any any (msg:"ICMPv6 Flood MLD RA"; ip_proto:58; itype:151; icode:15; threshold: type both, track by_src, count 100, seconds 3; classtype:policy-violation; sid:1000003; rev:1;)
+alert ipv6 any any -> ff02::1 any (msg:"ICMPv6 SCAN Local Net"; ip_proto:58; itype:128; icode:0; classtype:policy-violation; sid:1000004; rev:1;)
+# En el encabezado icmpv6 busca el valor 0 para el campo router lifetime
+alert ipv6 any any -> ff02::1 any (msg:"Posible ICMPv6 Kill Router6"; ip_proto:58; itype:134; icode:0; icmpv6.hdr; content:"|00 00|"; offset:6; depth:2; classtype:policy-violation; sid:1000005; rev:1;) 
+# alert ipv6 any any -> ff02::1 any (msg:"ICMPv6 Kill Router6 -H"; ipv6.hdr; content:"|3a|"; offset:40; depth:1; classtype:policy-violation; sid:1000006; rev:1;)
+# Data after the 'none' header (59) is suspicious.
+alert ipv6 any any -> any any (msg:"SURICATA data after none (59) header"; decode-event:ipv6.data_after_none_header; classtype:protocol-command-decode; sid:1000007; rev:1;)
+alert ipv6 any any -> any any (msg:"Potencial data exfiltration via flowlabel field"; ipv6.hdr; content:"|3b|"; offset:6; depth:1; classtype:policy-violation; sid:1000008; rev:1;)
+alert pkthdr any any -> any any (msg:"Potencial data exfiltration via flowlabel"; ip_proto:59; classtype:policy-violation; sid:1000009; rev:1;) 
