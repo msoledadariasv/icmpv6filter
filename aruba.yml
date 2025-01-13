@@ -47,6 +47,7 @@ topology:
       kind: linux
       image: docker.io/esanchezv/ntopng:latest
       binds:
+       - ./config/ntopng.conf:/etc/ntopng/ntopng.conf        
        - /home/ernesto/ntopng/data/ntopng:/var/lib/ntopng
       cmd: "--community -d /var/lib/ntopng -r 127.0.0.1:6379@0 -w 0.0.0.0:3000"
       env:
