@@ -16,6 +16,7 @@ exit
 dhcpv6-server vrf default
 pool v20
 range 2001:db8:20::31 2001:db8:20::3f prefix-len 64
+exit
 pool v30
 range 2001:db8:30::31 2001:db8:30::3f prefix-len 64
 exit
