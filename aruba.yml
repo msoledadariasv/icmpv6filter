@@ -9,7 +9,7 @@ topology:
     arubacore:
       kind: aruba_aoscx 
       image: vrnetlab/aruba_arubaos-cx:20230531220439
-      #startup-config: cfgcore.txt
+      startup-config: cfgcore.txt
       #ports:
         #- 8080:80/tcp
         #- 4443:443/tcp
@@ -17,7 +17,7 @@ topology:
     arubaaccess:
       kind: aruba_aoscx 
       image: vrnetlab/aruba_arubaos-cx:20230531220439
-      #startup-config: cfgaccess.txt
+      startup-config: cfgaccess.txt
       #ports:
         #- 8080:80/tcp
         #- 4443:443/tcp
@@ -43,15 +43,15 @@ topology:
       image: docker.io/esanchezv/kaliipv6v2.2:latest
       exec:
       - ip -6 route del default dev eth0
-    ntop:
-      kind: linux
-      image: ntop/ntopng:stable
-      binds:
-       - /home/ernesto/ntopng/data/ntopng:/var/lib/ntopng
-      exec:
-      - ip -6 route del default dev eth0
-      ports: 
-      - 3000:3000/tcp  
+    #ntop:
+      #kind: linux
+      #image: ntop/ntopng:stable
+      #binds:
+       #- /home/ernesto/ntopng/data/ntopng:/var/lib/ntopng
+      #exec:
+      #- ip -6 route del default dev eth0
+      #ports: 
+      #- 3000:3000/tcp  
         
       
   links:
@@ -66,7 +66,7 @@ topology:
       mtu: 1500
     - endpoints: ["arubaaccess:eth5","PC4:eth1"]
       mtu: 1500
-    - endpoints: ["arubaaccess:eth16","ntop:eth1"]
-      mtu: 1500  
+    #- endpoints: ["arubaaccess:eth16","ntop:eth1"]
+      #mtu: 1500  
     
     
