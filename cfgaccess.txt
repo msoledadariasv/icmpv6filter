@@ -35,3 +35,8 @@ no routing
 vlan access 30
 no shutdown
 exit
+interface 1/1/6
+no routing
+vlan trunk allowed all
+no shutdown
+exit
