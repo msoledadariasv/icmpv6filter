@@ -48,6 +48,7 @@ topology:
       image: ntop/ntopng:stable
       binds:
        - /home/ernesto/ntopng/data/ntopng:/var/lib/ntopng
+      cmd: "--community -d /var/lib/ntopng -r 127.0.0.1:6379@0 -w 0.0.0.0:3000"
       exec:
       - ip -6 route del default dev eth0
       ports: 
@@ -58,6 +59,7 @@ topology:
       image: redis:alpine
       binds:
        - /home/ernesto/ntopng/data/redis:/data
+      cmd: "--save 900 1" 
       exec:
       - ip -6 route del default dev eth0
       ports: 
