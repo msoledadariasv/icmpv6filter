@@ -43,16 +43,25 @@ topology:
       image: docker.io/esanchezv/kaliipv6v2.2:latest
       exec:
       - ip -6 route del default dev eth0
-    #ntop:
-      #kind: linux
-      #image: ntop/ntopng:stable
-      #binds:
-       #- /home/ernesto/ntopng/data/ntopng:/var/lib/ntopng
-      #exec:
-      #- ip -6 route del default dev eth0
-      #ports: 
-      #- 3000:3000/tcp  
-        
+    ntopng:
+      kind: linux
+      image: ntop/ntopng:stable
+      binds:
+       - /home/ernesto/ntopng/data/ntopng:/var/lib/ntopng
+      exec:
+      - ip -6 route del default dev eth0
+      ports: 
+      - 3000:3000/tcp
+      
+    ntopng-redis:
+      kind: linux
+      image: redis:alpine
+      binds:
+       - /home/ernesto/ntopng/data/redis:/data
+      exec:
+      - ip -6 route del default dev eth0
+      ports: 
+      - 6379:6379/tcp      
       
   links:
     
@@ -66,7 +75,9 @@ topology:
       mtu: 1500
     - endpoints: ["arubaaccess:eth5","PC4:eth1"]
       mtu: 1500
-    #- endpoints: ["arubaaccess:eth16","ntop:eth1"]
-      #mtu: 1500  
+    - endpoints: ["arubaaccess:eth6","ntopng:eth1"]
+      mtu: 1500
+    - endpoints: ["arubaaccess:eth7","ntopng-redis:eth1"]
+      mtu: 1500    
     
     
