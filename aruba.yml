@@ -52,7 +52,7 @@ topology:
       binds:
        #- ./config/ntopng.conf:/etc/ntopng/ntopng.conf        
        - /home/ernesto/ntopng/data/ntopng:/var/lib/ntopng
-      cmd: "--community -d /var/lib/ntopng -r 127.0.0.1:6379@0 -w 0.0.0.0:3000 -i eth1 -i syslog://127.0.0.1:9999"
+      cmd: "--community -d /var/lib/ntopng -r 127.0.0.1:6379@0 -w 0.0.0.0:3000 -i eth1 -i syslog://172.100.100.10:9999"
       exec:
       - ip -6 route del default dev eth0
       - ip -6 addr add 2001:db8::20/64 dev eth1
@@ -72,6 +72,7 @@ topology:
 
     suricata:
       kind: linux
+      mgmt-ipv4: 172.100.100.10 
       image: docker.io/esanchezv/suricatafilebeatv1:v1
       binds:
        - config/local.rules:/var/lib/suricata/rules/local.rules
