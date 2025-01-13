@@ -1,4 +1,8 @@
 name: aruba
+mgmt:
+  network: custom_mgmt                # management network name
+  ipv4-subnet: 172.100.100.0/24       # ipv4 range
+  ipv6-subnet: 3fff:172:100:100::/80  # ipv6 range (optional)
 
 topology:
   nodes:
