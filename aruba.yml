@@ -76,11 +76,7 @@ topology:
       #- 6379:6379/tcp
 
     suricata:
-      stages:
-        create:
-          wait-for:
-            - node: arubaaccess
-              stage: healthy 
+      
       kind: linux
       mgmt-ipv4: 172.20.20.10 
       image: docker.io/esanchezv/suricatafilebeatv1:v2
