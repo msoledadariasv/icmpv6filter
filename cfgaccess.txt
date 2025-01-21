@@ -22,6 +22,7 @@ interface 1/1/1
 no shutdown
 no routing
 vlan trunk allowed 10
+exit
 interface 1/1/2
 no routing
 vlan access 20
