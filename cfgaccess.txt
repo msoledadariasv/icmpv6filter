@@ -5,8 +5,7 @@ interface vlan 10
 ipv6 address 2001:db8:10::2/64
 exit
 interface vlan 20
-ipv6 address 2001:db8:20::1/64
-ipv6 nd prefix 2001:db8:20::1/64
+ipv6 address 2001:db8:20::2/64
 no ipv6 nd suppress-ra
 exit
 interface vlan 30
@@ -21,7 +20,7 @@ dhcpv6-relay
 interface 1/1/1
 no shutdown
 no routing
-vlan trunk allowed 10
+vlan trunk allowed 10,20
 exit
 interface 1/1/2
 no routing
