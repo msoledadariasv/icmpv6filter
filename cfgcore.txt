@@ -23,6 +23,6 @@ enable
 exit
 interface 1/1/1
 no routing
-vlan trunk allowed 10
+vlan trunk allowed 10,20
 no shutdown
 exit
