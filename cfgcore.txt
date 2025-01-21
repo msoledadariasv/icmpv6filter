@@ -4,6 +4,11 @@ exit
 interface vlan 10
 ipv6 address 2001:db8:10::1/64
 exit
+interface vlan 20
+ipv6 address 2001:db8:20::1/64
+ipv6 nd prefix 2001:db8:20::1/64
+no ipv6 nd suppress-ra
+exit
 interface loopback 0
 ipv6 address 2001:db8::1/64
 exit
