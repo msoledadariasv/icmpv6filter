@@ -6,11 +6,9 @@ ipv6 address 2001:db8:10::2/64
 exit
 interface vlan 20
 ipv6 address 2001:db8:20::2/64
-no ipv6 nd suppress-ra
 exit
 interface vlan 30
 ipv6 address 2001:db8:30::2/64
-no ipv6 nd suppress-ra
 ipv6 helper-address unicast 2001:db8::1
 exit
 ipv6 route 2001:db8::/64 2001:db8:10::1
