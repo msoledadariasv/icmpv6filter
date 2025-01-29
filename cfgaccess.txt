@@ -35,7 +35,7 @@ no shutdown
 exit
 interface 1/1/4
 no routing
-vlan access 30
+vlan access 20
 no shutdown
 exit
 interface 1/1/5
