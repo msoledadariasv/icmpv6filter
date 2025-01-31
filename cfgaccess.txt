@@ -14,10 +14,10 @@ ipv6 address 2001:db8:20::2/64
 exit
 ipv6 route 2001:db8::/64 2001:db8:10::1
 interface 1/1/1
-nd-snooping trust
-no shutdown
 no routing
+nd-snooping trust
 vlan trunk allowed 10,20
+no shutdown
 exit
 interface 1/1/2
 no routing
