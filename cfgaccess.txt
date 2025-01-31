@@ -1,9 +1,7 @@
 conf t
-nd-snooping enable
 vlan 10,20
 exit
 vlan 20
-nd-snooping
 exit
 interface vlan 10
 ipv6 address 2001:db8:10::2/64
@@ -16,7 +14,6 @@ interface 1/1/1
 no shutdown
 no routing
 vlan trunk allowed 10,20
-nd-snooping trust
 exit
 interface 1/1/2
 no routing
