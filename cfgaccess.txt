@@ -1,5 +1,6 @@
 conf t
-vlan 10,20
+nd-snooping enable
+vlan 10
 exit
 vlan 20
 nd-snooping
