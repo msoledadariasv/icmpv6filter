@@ -9,7 +9,7 @@ topology:
     arubacore:
       kind: aruba_aoscx 
       image: vrnetlab/aruba_arubaos-cx:20210610000730
-      #startup-config: cfgcore.txt
+      startup-config: cfgcore.txt
       #ports:
         #- 8080:80/tcp
         #- 4443:443/tcp
@@ -22,7 +22,7 @@ topology:
               stage: healthy 
       kind: aruba_aoscx 
       image: vrnetlab/aruba_arubaos-cx:20210610000730
-      #startup-config: cfgaccess.txt
+      startup-config: cfgaccess.txt
       #ports:
         #- 8080:80/tcp
         #- 4443:443/tcp
