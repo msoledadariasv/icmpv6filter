@@ -23,17 +23,21 @@ interface 1/1/2
 no routing
 vlan access 20
 port-access port-security enable
-port-access port-security client-limit 2
+port-access port-security client-limit 1
 no shutdown
 exit
 interface 1/1/3
 no routing
 vlan access 20
+port-access port-security enable
+port-access port-security client-limit 1
 no shutdown
 exit
 interface 1/1/4
 no routing
 vlan access 20
+port-access port-security enable
+port-access port-security client-limit 1
 no shutdown
 exit
 interface 1/1/5
