@@ -1,5 +1,6 @@
 conf t
 nd-snooping enable
+port-access port-security enable
 vlan 10
 exit
 vlan 20
@@ -21,6 +22,8 @@ exit
 interface 1/1/2
 no routing
 vlan access 20
+port-access port-security enable
+port-access port-security client-limit 2
 no shutdown
 exit
 interface 1/1/3
