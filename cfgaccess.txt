@@ -1,7 +1,6 @@
 conf t
 nd-snooping enable
 port-access port-security enable
-exit
 vlan 10
 exit
 vlan 20
