@@ -1,10 +1,14 @@
 conf t
 nd-snooping enable
 port-access port-security enable
+access-list ipv6 ipv6sec
+10 deny icmpv6 any ff02::1/128 icmp-type echo
+exit
 vlan 10
 exit
 vlan 20
 nd-snooping
+apply access-list ipv6 ipv6sec in
 exit
 interface vlan 10
 ipv6 address 2001:db8:10::2/64
