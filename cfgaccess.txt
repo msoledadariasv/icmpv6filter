@@ -1,36 +1,25 @@
 conf t
-nd-snooping enable
-port-access port-security enable
-vlan 10
-exit
 vlan 20
-nd-snooping
-exit
-interface vlan 10
-ipv6 address 2001:db8:10::2/64
 exit
 interface vlan 20
 ipv6 address 2001:db8:20::2/64
+ipv6 helper-address unicast 2001:db8::1
 exit
-ipv6 route 2001:db8::/64 2001:db8:10::1
+ipv6 route 2001:db8::/64 2001:db8:20::1
+dhcpv6-relay
 interface 1/1/1
 no routing
-nd-snooping trust
-vlan trunk allowed 10,20
+vlan trunk allowed 20
 no shutdown
 exit
 interface 1/1/2
 no routing
 vlan access 20
-port-access port-security enable
-port-access port-security client-limit 2
 no shutdown
 exit
 interface 1/1/3
 no routing
 vlan access 20
-port-access port-security enable
-port-access port-security client-limit 2
 no shutdown
 exit
 interface 1/1/4
