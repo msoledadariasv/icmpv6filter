@@ -43,14 +43,23 @@ topology:
     PC2:
       kind: linux
       image: ghcr.io/hellt/network-multitool
+      binds:
+       - config/dhclient.sh:/root/dhclient.sh
       exec:
       - ip -6 route del default dev eth0
+      - chmod +x /root/dhclient.sh
+      - bash /root/dhclient.sh
       
     PC3:
       kind: linux
       image: ghcr.io/hellt/network-multitool
+      binds:
+       - config/client.sh:/root/client.sh
+      exec:
       exec:
       - ip -6 route del default dev eth0
+      - chmod +x /root/client.sh
+      - bash /root/client.sh
       
     PC4:
       kind: linux
