@@ -10,6 +10,8 @@ topology:
       kind: aruba_aoscx 
       image: vrnetlab/aruba_arubaos-cx:20210610000730
       startup-config: cfgcore.txt
+      exec:
+        - "sysctl -w net.ipv6.conf.eth1.accept_ra=0"
       #ports:
         #- 8080:80/tcp
         #- 4443:443/tcp
