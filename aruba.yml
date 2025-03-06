@@ -17,11 +17,6 @@ topology:
         #- 4443:443/tcp
             
     arubaaccess:
-      stages:
-        create:
-          wait-for:
-            - node: arubacore
-              stage: healthy 
       kind: aruba_aoscx 
       image: vrnetlab/aruba_arubaos-cx:20210610000730
       startup-config: cfgaccess.txt
