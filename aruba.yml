@@ -29,7 +29,7 @@ topology:
        kind: linux
        image: docker.io/esanchezv/srvhttps:latest
        binds:
-        - config/serverweb.sh:/root/serverweb.sh
+        #- config/serverweb.sh:/root/serverweb.sh
         - config/web-server.html:/var/www/localhost/htdocs/index.html
        #- config/webinar-ipv6-lacnic-parte1y2.zip:/var/www/localhost/htdocs/webinar-ipv6-lacnic-parte1y2.zip
        exec:
