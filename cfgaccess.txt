@@ -32,3 +32,20 @@ no routing
 vlan access 20
 no shutdown
 exit
+interface 1/1/6
+no routing
+vlan access 20
+no shutdown
+exit
+interface 1/1/7
+no routing
+vlan access 20
+no shutdown
+exit
+interface 1/1/8
+no routing
+vlan access 20
+no shutdown
+exit
+
+
