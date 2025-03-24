@@ -25,3 +25,8 @@ no routing
 vlan trunk allowed 20
 no shutdown
 exit
+interface 1/1/2
+ipv6 address 2001:db8:d1::1/64
+no shut
+exit
+
