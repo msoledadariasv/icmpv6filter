@@ -53,7 +53,7 @@ topology:
       
     PC3:
       kind: linux
-      image: docker.io/esanchezv/kaliipv6:latest
+      image: docker.io/esanchezv/kali-httpie:latest
       exec:
       - ip -6 route del default dev eth0
             
