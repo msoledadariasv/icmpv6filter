@@ -9,40 +9,8 @@ no routing
 vlan trunk native 20
 no shutdown
 exit
-interface 1/1/2
+interface 1/1/2-1/1/5
 no routing
 vlan access 20
 no shutdown
 exit
-interface 1/1/3
-no routing
-vlan access 20
-no shutdown
-exit
-interface 1/1/4
-no routing
-vlan access 20
-no shutdown
-exit
-interface 1/1/5
-no routing
-vlan access 20
-no shutdown
-exit
-interface 1/1/6
-no routing
-vlan access 20
-no shutdown
-exit
-interface 1/1/7
-no routing
-vlan access 20
-no shutdown
-exit
-interface 1/1/8
-no routing
-vlan access 20
-no shutdown
-exit
-
-
