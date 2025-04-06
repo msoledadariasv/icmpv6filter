@@ -6,15 +6,13 @@ mgmt:
 
 topology:
   nodes:
-    arubacore:
-      kind: aruba_aoscx 
-      image: vrnetlab/aruba_arubaos-cx:20210610000730
-      startup-config: cfgcore.txt
+    srlrouter:
+      kind: nokia_srlinux
+      image: ghcr.io/nokia/srlinux:24.10.1
+      type: ixrd3
+      startup-config: router/config.json
       exec:
-        - "sysctl -w net.ipv6.conf.eth1.accept_ra=0"
-      #ports:
-        #- 8080:80/tcp
-        #- 4443:443/tcp
+        - "sysctl -w net.ipv6.conf.e1-1.accept_ra=0"
             
     arubaaccess:
       kind: aruba_aoscx 
@@ -74,9 +72,9 @@ topology:
    
   links:
        
-    - endpoints: ["arubacore:eth2","srvweb:eth1"]
+    - endpoints: ["srlrouter:e1-2","srvweb:eth1"]
       mtu: 1500
-    - endpoints: ["arubacore:eth1","arubaaccess:eth1"]
+    - endpoints: ["srlrouter:e1-1","arubaaccess:eth1"]
       mtu: 1500
     - endpoints: ["arubaaccess:eth2","PC1:eth1"]
       mtu: 1500
