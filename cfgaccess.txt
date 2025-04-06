@@ -3,13 +3,10 @@ vlan 20
 exit
 interface vlan 20
 ipv6 address 2001:db8:20::2/64
-ipv6 helper-address unicast 2001:db8::1
 exit
-ipv6 route 2001:db8::/64 2001:db8:20::1
-dhcpv6-relay
 interface 1/1/1
 no routing
-vlan trunk allowed 20
+vlan trunk native 20
 no shutdown
 exit
 interface 1/1/2
