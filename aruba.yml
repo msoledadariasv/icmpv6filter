@@ -8,11 +8,6 @@ topology:
   nodes:
   
     srlrouter:
-      stages:
-        create:
-          wait-for:
-            - node: arubaaccess
-              stage: unhealthy
       kind: nokia_srlinux
       image: ghcr.io/nokia/srlinux:24.10.1
       type: ixrd3
