@@ -1,5 +1,8 @@
 conf t
+nd-snooping enable
+port-access port-security enable
 vlan 20
+nd-snooping
 exit
 interface vlan 20
 ipv6 address 2001:db8:20::2/64
@@ -7,10 +10,14 @@ exit
 interface 1/1/1
 no routing
 vlan trunk native 20
+nd-snooping trust
 no shutdown
 exit
 interface 1/1/2-1/1/5
 no routing
 vlan access 20
+port-access port-security enable
+port-access port-security client-limit 1
+ipv6 source-lockdown
 no shutdown
 exit
