@@ -6,12 +6,13 @@ mgmt:
 
 topology:
   nodes:
-  stages:
+  
+    srlrouter:
+      stages:
         create:
           wait-for:
             - node: arubaaccess
               stage: unhealthy
-    srlrouter:
       kind: nokia_srlinux
       image: ghcr.io/nokia/srlinux:24.10.1
       type: ixrd3
