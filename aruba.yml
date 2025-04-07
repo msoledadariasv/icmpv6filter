@@ -12,7 +12,7 @@ topology:
         create:
           wait-for:
             - node: arubaaccess
-              stage: healthy
+              stage: unhealthy
       kind: nokia_srlinux
       image: ghcr.io/nokia/srlinux:24.10.1
       type: ixrd3
