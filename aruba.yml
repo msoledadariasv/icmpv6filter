@@ -17,7 +17,7 @@ topology:
             
     arubaaccess:
       kind: aruba_aoscx 
-      image: vrnetlab/aruba_arubaos-cx:20210610000730
+      image: vrnetlab/aruba_arubaos-cx:20240731173624
       startup-config: cfgaccess.txt
      
       #ports:
