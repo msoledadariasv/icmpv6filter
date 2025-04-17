@@ -6,7 +6,8 @@ La topología creada tiene por objetivo poveer un entorno controlado para el ana
 La imagen utilizada del switch ArubaOS-CX se provee como una VM basada en QEMU y requiere del proyecto vrnetlab para ejecutar la VM dentro de un contenedor docker, en pocas palabras se trata de
 "una VM disfrazada de contenedor"
 Siga los siguientes pasos:
-* Crear una cuenta en Github e importar el repositorio 
+* Descargar los archivos de topología desde: https://github.com/ernestosv73/icmpv6filter/archive/refs/heads/main.zip
+* Crear una cuenta en Github e importar el repositorio descargado anteriormente.
 * Crear una cuenta en https://networkingsupport.hpe.com/
 * Descargar la imagen Aruba_AOS-CX_Switch_Simulator_10.14.1000.ova desde https://networkingsupport.hpe.com/downloads/software/RmlsZTo3YmRlNGViZS01ZTY3LTExZWYtYTQzYy0wZjBjOGRmMzJkZmU%3D.
 * Instalar VSCode e instalar las extensiones GitHub Codespaces y Dev Containers.
