@@ -27,5 +27,7 @@ nd-snooping trust
 shutdown
 no shutdown
 exit
+mac-address-table age-time 60
+
 
 
