@@ -16,5 +16,16 @@ vlan access 20
 shutdown
 no shutdown
 exit
+nd-snooping enable
+vlan 20
+nd-snooping
+shutdown
+no shutdown
+exit
+interface 1/1/1
+nd-snooping trust
+shutdown
+no shutdown
+exit
 
 
