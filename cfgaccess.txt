@@ -1,4 +1,5 @@
 conf t
+ip icmp throttle 1000
 mac-address-table age-time 60
 nd-snooping enable
 vlan 20
