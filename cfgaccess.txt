@@ -19,6 +19,7 @@ exit
 nd-snooping enable
 vlan 20
 nd-snooping
+ipv6 destination-guard
 shutdown
 no shutdown
 exit
