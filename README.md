@@ -13,4 +13,5 @@ Siga los siguientes pasos:
 * Instalar VSCode e instalar las extensiones GitHub Codespaces y Dev Containers.
 * Ejecutar la topología haciendo clic en "Run in codespace", lo que creará un nuevo espacio.
 * Desde el directorio /workspaces ejecutar git clone https://github.com/hellt/vrnetlab.git para descargar los archivos requeridos para crear la imagen docker de ArubaOS-CX
-* Para copiar la imagen .ova al repositorio remoto debemos iniciar sesión desde VSCode ejecutando Ctrl+Shift+P y escribir GitHub: Sign in  
+* Para copiar la imagen .ova al repositorio remoto debemos iniciar sesión desde VSCode ejecutando Ctrl+Shift+P y escribir GitHub: Sign in
+* Conectarse al codespace ejecutando Ctrl+Shift+P y escribir Connect to Codespace.  
