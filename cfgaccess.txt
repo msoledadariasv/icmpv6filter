@@ -29,7 +29,7 @@ nd-snooping trust
 shutdown
 no shutdown
 exit
-interface 1/1/2-1/1/5
+interface 1/1/1-1/1/5
 ipv6 source-lockdown
 shutdown
 no shutdown
