@@ -1,5 +1,4 @@
 conf t
-ip icmp throttle 1000
 interface 1/1/1
 vlan 20
 shutdown
@@ -20,7 +19,6 @@ exit
 nd-snooping enable
 vlan 20
 nd-snooping
-ipv6 destination-guard
 ipv6 source-lockdown
 shutdown
 no shutdown
@@ -30,7 +28,6 @@ nd-snooping trust
 shutdown
 no shutdown
 exit
-mac-address-table age-time 60
 interface 1/1/2-1/1/5
 ipv6 source-lockdown
 shutdown
