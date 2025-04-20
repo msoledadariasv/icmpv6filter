@@ -19,6 +19,7 @@ exit
 nd-snooping enable
 vlan 20
 nd-snooping
+nd-snooping allow-bindings-on-trusted-ports 
 ipv6 source-lockdown
 shutdown
 no shutdown
