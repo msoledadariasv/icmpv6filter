@@ -1,6 +1,5 @@
 conf t
 ip icmp throttle 1000
-no ip icmp unreachable
 interface 1/1/1
 vlan 20
 shutdown
