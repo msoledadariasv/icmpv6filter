@@ -29,11 +29,15 @@ nd-snooping trust
 shutdown
 no shutdown
 exit
+port-access port-security enable
 interface 1/1/1-1/1/5
 ipv6 source-lockdown
 shutdown
 no shutdown
 exit
-
-
-
+interface 1/1/2-1/1/5
+port-access port-security enable
+port-access port-security client-limit 2
+shutdown
+no shutdown
+exit
