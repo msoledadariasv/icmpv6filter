@@ -12,12 +12,12 @@ La topología creada tiene por objetivo poveer un entorno controlado para el ana
 * PCx vía bash. docker exec -it clab-icmpv6-PCx /bin/bash
 ## Ejemplos ataques
 ### MiTM/DOS vía Neighbor Spoofing
-* This is an "ARP spoofer" for IPv6, redirecting all local traffic to your own
+This is an "ARP spoofer" for IPv6, redirecting all local traffic to your own
 system (or nirvana if fake-mac does not exist) by answering falsely to
 Neighbor Solitication requests. (from: https://www-kali-org.translate.goog/tools/thc-ipv6/?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=tc#atk6-parasite6)
-  * Desde PC1 Kali
-  Habilitar enrutamiento: sysctl -w net.ipv6.conf.eth1.forwarding=1
-  Ejecutar: atk6-parasite6 eth1
+* Desde PC1 Kali
+  * Habilitar enrutamiento: sysctl -w net.ipv6.conf.eth1.forwarding=1
+  * Ejecutar: atk6-parasite6 eth1
 ## Vista gráfica
 ---
 ![Alt text](images/topoicmpv6.png)
