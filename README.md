@@ -10,4 +10,8 @@ La topología creada tiene por objetivo poveer un entorno controlado para el an�
 |PC1 y PC3       |Kali Linux                     |THC IPv6 Tool e IPv6Toolkit  |
 |PC2 y PC4       |Alpine Linux                   |                             |
 
+## Acceso a los nodos
+* Router Nokia vía SSH. `ssh admin@clab-icmpv6-srlrouter` password: `NokiaSrl1!`
+* Switch Aruba vía SSH. `ssh admin@clab-icmpv6-arubaaccess` password: `admin`
+* PCx vía bash. `docker exec -it clab-icmpv6-PCx /bin/bash`
 
