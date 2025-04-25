@@ -15,9 +15,12 @@ La topología creada tiene por objetivo poveer un entorno controlado para el ana
 This is an "ARP spoofer" for IPv6, redirecting all local traffic to your own
 system (or nirvana if fake-mac does not exist) by answering falsely to
 Neighbor Solitication requests. (from: https://www-kali-org.translate.goog/tools/thc-ipv6/?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=tc#atk6-parasite6)
+* Desde srvweb iniciar el servicio nginx
 * Desde PC1 Kali
   * Habilitar enrutamiento: sysctl -w net.ipv6.conf.eth1.forwarding=1
   * Ejecutar: atk6-parasite6 eth1
+* Desde PC3
+  * Realizar consulta http ejecutando http http://[2001:db8:d1::50]  
 ## Vista gráfica
 ---
 ![Alt text](images/topoicmpv6.png)
