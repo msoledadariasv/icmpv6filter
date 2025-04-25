@@ -7,7 +7,7 @@ La topolog√≠a creada tiene por objetivo poveer un entorno controlado para el an√
 |----------------|-------------------------------|-----------------------------|
 |Router          |Nokia SRL Linux 24.10          |                             |
 |Switch          |Aruba AOS-CX 10.14             |                             |
-|PC1 y PC3       |Kali Linux                    `|THC IPv6 Tool e IPv6Toolkit  |
-|PC2 y PC4       |Alpine Linux                  `|                             |
+|PC1 y PC3       |Kali Linux                     |THC IPv6 Tool e IPv6Toolkit  |
+|PC2 y PC4       |Alpine Linux                   |                             |
 
 
