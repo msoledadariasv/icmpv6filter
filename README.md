@@ -18,7 +18,7 @@ La topologÃ­a creada tiene por objetivo poveer un entorno controlado para el anÃ
 >This is an "ARP spoofer" for IPv6, redirecting all local traffic to your own
 system (or nirvana if fake-mac does not exist) by answering falsely to
 Neighbor Solitication requests. 
-* Desde el nodo **srvweb** iniciar el servicio ejecutando en comando `nginx`
+* Desde el nodo **srvweb** iniciar el servicio ejecutando el comando `nginx`
 * Desde **arubaaccess** verificar la tabla de **IP bindings** ejecutando: `show nd-snooping bindings`
 * Desde el nodo **PC1** Kali
   * Habilitar enrutamiento: `sysctl -w net.ipv6.conf.eth1.forwarding=1`
