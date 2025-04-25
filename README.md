@@ -20,7 +20,8 @@ Neighbor Solitication requests. (from: https://www-kali-org.translate.goog/tools
   * Habilitar enrutamiento: sysctl -w net.ipv6.conf.eth1.forwarding=1
   * Ejecutar: atk6-parasite6 eth1
 * Desde PC3
-  * Realizar consulta http ejecutando http http://[2001:db8:d1::50]  
+  * Realizar consulta http ejecutando http http://[2001:db8:d1::50]
+* Desde arubaaccess verificar la mitigación del ataque ejecutando: show nd-snooping statistics 
 ## Vista gráfica
 ---
 ![Alt text](images/topoicmpv6.png)
