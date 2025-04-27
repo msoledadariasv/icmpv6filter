@@ -14,10 +14,10 @@ La topología creada tiene por objetivo poveer un entorno controlado para el an�
 * Switch Aruba vía SSH. `ssh admin@clab-icmpv6-arubaaccess` password: `admin`
 * PCx vía bash. `docker exec -it clab-icmpv6-PCx /bin/bash`
 ## Ejemplos ataques
-### MiTM/DOS vía Neighbor Spoofing (atk6-parasite6). https://www.kali.org/tools/thc-ipv6/
+### MiTM/DOS vía Neighbor Spoofing (atk6-parasite6). 
 >This is an "ARP spoofer" for IPv6, redirecting all local traffic to your own
 system (or nirvana if fake-mac does not exist) by answering falsely to
-Neighbor Solitication requests.
+Neighbor Solitication requests. From https://www.kali.org/tools/thc-ipv6/
 
 ![Alt text](images/topoatkparasite.png)
 
