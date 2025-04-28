@@ -28,4 +28,7 @@ Neighbor Solitication requests.*  From https://www.kali.org/tools/thc-ipv6/
   * Lanzar el ataque ejecutando: `atk6-parasite6 eth1`
 * Desde **PC3**
   * Realizar consulta http ejecutando `http http://[2001:db8:d1::50]`
-* Desde **arubaaccess** verificar la mitigación del ataque ejecutando: `show nd-snooping statistics` 
+* Desde **arubaaccess** verificar la mitigación del ataque ejecutando: `show nd-snooping statistics`
+### **DoS mediante ICMPv6 Flooding** 
+
+>***atk6-flood_unreachable:** Flood the target with ICMPv6 unreachable packets.*    
