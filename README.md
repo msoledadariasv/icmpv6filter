@@ -19,7 +19,7 @@ La topolog√≠a creada tiene por objetivo poveer un entorno controlado para el an√
 system (or nirvana if fake-mac does not exist) by answering falsely to
 Neighbor Solitication requests.*  From https://www.kali.org/tools/thc-ipv6/
 
-![Alt text](images/topoatkparasite.png)
+![Alt text](images/topoipv6filter.png)
 
 * Desde el nodo **srvweb** iniciar el servicio ejecutando el comando `nginx`
 * Desde **arubaaccess** verificar la tabla de **IP bindings** ejecutando: `show nd-snooping bindings`
