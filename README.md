@@ -38,4 +38,11 @@ Neighbor Solitication requests.*  From https://www.kali.org/tools/thc-ipv6/
   * Next Header field value 44 (Fragment) `atk6-flood_unreach6 -F eth1 fe80::20`
   * Next Header field value 60 (Destination Options) `atk6-flood_unreach6 -D eth1 fe80::20`
   * Next Header field value 0 (Hop-by-Hop Options) `atk6-flood_unreach6 -H eth1 fe80::20`
-    
+* Mitigación: config **ICMPv6 ACL filter**   
+>***atk6-ndpexhaust26:** Flood the target /64 network with ICMPv6 TooBig error messages.*
+* Desde **PC3**
+  *  Lanzar el ataque ejecutando: `atk6-ndpexhaust26 -Tr eth1 2001:db8:70::`
+  * Opciones: 
+  * -T send ICMPv6 Time-to-live-exeeded
+  * -r randomize the source from your /64 prefix
+* Mitigación: config **ICMPv6 ACL filter**    
