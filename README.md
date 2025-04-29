@@ -45,4 +45,4 @@ Neighbor Solitication requests.*  From https://www.kali.org/tools/thc-ipv6/
   * Opciones: 
   * -T send ICMPv6 Time-to-live-exeeded
   * -r randomize the source from your /64 prefix
-* Mitigación: config **ICMPv6 ACL filter**    
+* Mitigación: config **ICMPv6 ACL filter / port access secure client limit**    
